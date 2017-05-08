@@ -485,6 +485,36 @@ Content Sections - basic style
   -vendor-animation-duration: 6s;
   -vendor-animation-delay: 3s; }
 
+/* -------------
+
+# -- section 2
+
+---------------- */
+#section2.cd-section.about .content-wrapper h2 {
+  clear: both; }
+#section2.cd-section.about .content-wrapper .content {
+  margin: auto;
+  display: flex;
+  width: 90%;
+  justify-content: center; }
+  #section2.cd-section.about .content-wrapper .content p {
+    font-size: 1.2rem !important;
+    text-align: justify;
+    width: 45%; }
+
+/* -------------
+
+# -- section 3
+
+---------------- */
+/* -------------
+
+# -- section 7
+
+---------------- */
+#section7.connect .content-wrapper p {
+  text-align: center; }
+
 .cd-section {
   /* vertically align its content*/
   display: table;
@@ -521,7 +551,8 @@ Content Sections - basic style
     letter-spacing: 2px;
     width: 90%;
     max-width: 680px;
-    font-family: "Futura LT"; }
+    font-family: "Futura LT";
+    text-align: justify; }
     .cd-section p a {
       color: inherit; }
   @media only screen and (min-width: 800px) {

@@ -464,7 +464,6 @@ Content Sections - basic style
 	-webkit-filter: grayscale(100%);
 	filter: gray;
 	background-attachment: fixed;
-
 }
 
 
@@ -473,6 +472,8 @@ Content Sections - basic style
 # -- section 1
 
 ---------------- */
+
+
 
 
 .site-quote {
@@ -485,6 +486,62 @@ Content Sections - basic style
     -vendor-animation-delay: 3s;
 }
 
+
+/* -------------
+
+# -- section 2
+
+---------------- */
+
+#section2.cd-section.about {
+
+
+
+	.content-wrapper {
+
+		h2 {
+			clear: both;
+		}
+
+		.content {
+			margin: auto;
+			display: flex;
+			width: 90%;
+			justify-content: center;
+
+			p {
+				font-size: 1.2rem!important;
+				text-align: justify;
+				width: 45%;
+
+			}
+		}
+
+	}
+
+
+
+}
+
+/* -------------
+
+# -- section 3
+
+---------------- */
+
+/* -------------
+
+# -- section 7
+
+---------------- */
+
+#section7.connect {
+	.content-wrapper {
+		p {
+			text-align: center;
+		}
+	}
+}
 
 
 
@@ -539,6 +596,7 @@ Content Sections - basic style
 		width: 90%;
 		max-width: 680px;
 		font-family: "Futura LT";
+		text-align: justify;
 
 		a {
 			color: inherit;
