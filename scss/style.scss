@@ -26,7 +26,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-2;
-	background-color: $color-1;
+	background-color: #fff;
 	@include font-smoothing;
 }
 
@@ -130,6 +130,7 @@ Vertical navigation
 	@include transition(transform .2s);
 	@include border-radius;
 	background-color: #fff;
+	z-index: 1001;
 
 	a {
 		display: block;
@@ -233,6 +234,7 @@ Vertical navigation
 				/* Force Hardware Acceleration */
 				@include backface-visibility(hidden);
 				@include transform(translateZ(0));
+				background: #fff;
 			}
 
 			&::before {
@@ -241,7 +243,7 @@ Vertical navigation
 				height: 32px;
 				width: 32px;
 				border-radius: 50%;
-				background: #fff;
+				background: #333;
 				@include transform(translateX(-50%) scale(.25));
 				@include transition(transform .4s, background-color .2s);
 			}
@@ -253,6 +255,7 @@ Vertical navigation
 				height: 16px;
 				width: 16px;
 				background: url(../img/cd-nav-icons.svg) no-repeat;
+
 				@include transform(translateX(-50%) scale(0));
 				@include transition(transform .4s 0s, opacity .1s .3s);
 			}
@@ -356,6 +359,11 @@ Vertical navigation
 	}
 }
 
+.cd-vertical-nav:hover a::before {
+	background: #fff;
+}
+
+
 /* --------------------------------
 
 	Header Styles // Social Nav
@@ -373,8 +381,8 @@ Vertical navigation
 		padding-left: 20px;
 		font-family: 'Moon';
 		font-size: 2em;
-		color: #fff;
-		font-family: 'Playfair Display', serif!important;
+		color: #333;
+		font-family: 'Anton', sans-serif!important;
 
 		-vendor-animation-duration: 6s;
 	    -vendor-animation-delay: 3s;
@@ -388,7 +396,7 @@ Vertical navigation
 		li {
 			display: inline-block;
 			padding: 10px;
-			color: #fff!important;
+			color: #333!important;
 
 			a {
 				color: inherit;
@@ -446,22 +454,22 @@ Content Sections - basic style
 	background: url(../img/IMG_1893.JPG);
 }
 #section2 {
-	background: url(../img/IMG_1894.JPG);
+	// background: url(../img/IMG_1894.JPG);
 }
 #section3 {
-	background: url(../img/IMG_1899.JPG);
+	// background: url(../img/IMG_1899.JPG);
 }
 #section4 {
-	background: url(../img/IMG_1897.JPG);
+	// background: url(../img/IMG_1897.JPG);
 }
 #section5 {
-	background: url(../img/IMG_1891.JPG);
+	// background: url(../img/IMG_1891.JPG);
 }
 #section6 {
-	background: url(../img/IMG_1892.JPG);
+	// background: url(../img/IMG_1892.JPG);
 }
 #section7 {
-	background: url(../img/IMG_1902.JPG);
+	// background: url(../img/IMG_1902.JPG);
 }
 
 
@@ -480,7 +488,7 @@ Content Sections - basic style
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	color: #fff;
+	color: #333;
 
 	> div {
 		/* vertically align <div> inside <section> */
@@ -489,18 +497,7 @@ Content Sections - basic style
 		text-align: center;
 	}
 
-	.overlay-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		border-top: 70px solid #111;
-		border-left: 70px solid #111;
-		border-right: 70px solid #111;
-		border-bottom: none;
-		background-color: rgba(0,0,0,0.5);
-	}
+
 	.content-wrapper {
 		position: relative;
 		z-index: 1000;
@@ -508,7 +505,7 @@ Content Sections - basic style
 
 	.section-title {
 		font-family: 'Anton', sans-serif!important;
-		color: #fff;
+		color: #333;
 		font-size: 3.5rem;
 		margin-bottom: 30px;
 	}
@@ -536,7 +533,7 @@ Content Sections - basic style
 		max-width: 680px;
 		// font-family: "Futura LT";
 		text-align: justify;
-		color: #fff;
+		color: #333;
 
 		a {
 			color: inherit;
@@ -563,44 +560,62 @@ Content Sections - basic style
 # -- section 1
 
 --------------------------------------------------------------------- */
+#section1 {
 
-
-.site-quote {
-	// color: #A29CA2;
-	color: #fff;
-	font-family: 'Anton', sans-serif;
-	font-size: 5em;
-	letter-spacing: 2px;
-	width: max-content!important;
-	line-height: normal;
-	margin: auto;
-	display: block;
-	position: relative;
-	-vendor-animation-duration: 6s;
-    -vendor-animation-delay: 3s;
-	line-height: 80px;
-
-	.there {
-		font-size: 3.5em!important;
+	.overlay-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.5);
+		border: 70px solid #fff;
+		// border-left: 70px solid #fff;
+		// border-right: 70px solid #fff;
+		// border-bottom: none;
 	}
-	.are {
-		font-size: 3em!important;
-	}
-	.hundreds {
-		font-size: 3.5em!important;
-		// font-family: 'Open Sans Condensed', sans-serif;
-		font-family: 'Playfair Display', serif!important;
-		color: #70557e!important;
 
-		.s {
-			font-size: .5em!important;
+	.site-quote {
+		// color: #A29CA2;
+		color: #fff;
+		font-family: 'Anton', sans-serif;
+		font-size: 4em;
+		letter-spacing: 2px;
+		width: max-content!important;
+		line-height: normal;
+		margin: auto;
+		display: block;
+		position: relative;
+		-vendor-animation-duration: 6s;
+	    -vendor-animation-delay: 3s;
+		line-height: 80px;
+
+		.there {
+			font-size: 2.5em!important;
 		}
+		.are {
+			font-size: 2em!important;
+		}
+		.hundreds {
+			font-size: 2.5em!important;
+			// font-family: 'Open Sans Condensed', sans-serif;
+			font-family: 'Playfair Display', serif!important;
+			color: #70557e!important;
+
+			.s {
+				font-size: .5em!important;
+			}
+		}
+		.the-rest {
+			font-family: 'Open Sans Condensed', sans-serif!important;
+		}
+
 	}
-	.the-rest {
-		font-family: 'Open Sans Condensed', sans-serif!important;
-	}
+
 
 }
+
+
 
 
 

@@ -13,7 +13,7 @@ body {
   font-size: 1.6rem;
   font-family: "Sintony", sans-serif;
   color: #70557e;
-  background-color: #3a2c41;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -120,7 +120,8 @@ Vertical navigation
   -moz-transition: -moz-transform 0.2s;
   transition: transform 0.2s;
   border-radius: 0.25em;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: 1001; }
   .cd-vertical-nav a {
     display: block;
     padding: 1em;
@@ -227,14 +228,15 @@ Vertical navigation
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
           -o-transform: translateZ(0);
-          transform: translateZ(0); }
+          transform: translateZ(0);
+          background: #fff; }
         .cd-vertical-nav a::before {
           /* filled circle */
           top: 0;
           height: 32px;
           width: 32px;
           border-radius: 50%;
-          background: #fff;
+          background: #333;
           -webkit-transform: translateX(-50%) scale(0.25);
           -moz-transform: translateX(-50%) scale(0.25);
           -ms-transform: translateX(-50%) scale(0.25);
@@ -391,6 +393,9 @@ Vertical navigation
         -o-transform: translateX(0);
         transform: translateX(0); } }
 
+.cd-vertical-nav:hover a::before {
+  background: #fff; }
+
 /* --------------------------------
 
 	Header Styles // Social Nav
@@ -406,8 +411,8 @@ Vertical navigation
     padding-left: 20px;
     font-family: 'Moon';
     font-size: 2em;
-    color: #fff;
-    font-family: "Playfair Display", serif !important;
+    color: #333;
+    font-family: "Anton", sans-serif !important;
     -vendor-animation-duration: 6s;
     -vendor-animation-delay: 3s; }
   .header-container .social {
@@ -418,7 +423,7 @@ Vertical navigation
     .header-container .social li {
       display: inline-block;
       padding: 10px;
-      color: #fff !important; }
+      color: #333 !important; }
       .header-container .social li a {
         color: inherit; }
 
@@ -453,24 +458,6 @@ Content Sections - basic style
 #section1 {
   background: url(../img/IMG_1893.JPG); }
 
-#section2 {
-  background: url(../img/IMG_1894.JPG); }
-
-#section3 {
-  background: url(../img/IMG_1899.JPG); }
-
-#section4 {
-  background: url(../img/IMG_1897.JPG); }
-
-#section5 {
-  background: url(../img/IMG_1891.JPG); }
-
-#section6 {
-  background: url(../img/IMG_1892.JPG); }
-
-#section7 {
-  background: url(../img/IMG_1902.JPG); }
-
 #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
   background-size: cover;
   background-position: center;
@@ -483,29 +470,18 @@ Content Sections - basic style
   width: 100%;
   height: 100vh;
   position: relative;
-  color: #fff; }
+  color: #333; }
   .cd-section > div {
     /* vertically align <div> inside <section> */
     display: table-cell;
     vertical-align: middle;
     text-align: center; }
-  .cd-section .overlay-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-top: 70px solid #111;
-    border-left: 70px solid #111;
-    border-right: 70px solid #111;
-    border-bottom: none;
-    background-color: rgba(0, 0, 0, 0.5); }
   .cd-section .content-wrapper {
     position: relative;
     z-index: 1000; }
   .cd-section .section-title {
     font-family: "Anton", sans-serif !important;
-    color: #fff;
+    color: #333;
     font-size: 3.5rem;
     margin-bottom: 30px; }
   .cd-section .flourish {
@@ -523,7 +499,7 @@ Content Sections - basic style
     width: 90%;
     max-width: 680px;
     text-align: justify;
-    color: #fff; }
+    color: #333; }
     .cd-section p a {
       color: inherit; }
   @media only screen and (min-width: 800px) {
@@ -539,10 +515,18 @@ Content Sections - basic style
 # -- section 1
 
 --------------------------------------------------------------------- */
-.site-quote {
+#section1 .overlay-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 70px solid #fff; }
+#section1 .site-quote {
   color: #fff;
   font-family: 'Anton', sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: 2px;
   width: max-content !important;
   line-height: normal;
@@ -552,17 +536,17 @@ Content Sections - basic style
   -vendor-animation-duration: 6s;
   -vendor-animation-delay: 3s;
   line-height: 80px; }
-  .site-quote .there {
-    font-size: 3.5em !important; }
-  .site-quote .are {
-    font-size: 3em !important; }
-  .site-quote .hundreds {
-    font-size: 3.5em !important;
+  #section1 .site-quote .there {
+    font-size: 2.5em !important; }
+  #section1 .site-quote .are {
+    font-size: 2em !important; }
+  #section1 .site-quote .hundreds {
+    font-size: 2.5em !important;
     font-family: "Playfair Display", serif !important;
     color: #70557e !important; }
-    .site-quote .hundreds .s {
+    #section1 .site-quote .hundreds .s {
       font-size: 0.5em !important; }
-  .site-quote .the-rest {
+  #section1 .site-quote .the-rest {
     font-family: "Open Sans Condensed", sans-serif !important; }
 
 /* -------------
