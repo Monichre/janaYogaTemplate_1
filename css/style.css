@@ -407,6 +407,7 @@ Vertical navigation
     font-family: 'Moon';
     font-size: 2em;
     color: #fff;
+    font-family: "Playfair Display", serif !important;
     -vendor-animation-duration: 6s;
     -vendor-animation-delay: 3s; }
   .header-container .social {
@@ -444,64 +445,131 @@ Content Sections - basic style
 @font-face {
   font-family: 'Giraffey';
   src: url("../fonts/Giraffey.otf"); }
+/* ---------------------------------------------------------------------
+
+				General Section Styles
+
+--------------------------------------------------------------------- */
+#section1 {
+  background: url(../img/IMG_1893.JPG); }
+
 #section2 {
-  background: url(../img/jana-2.jpg); }
+  background: url(../img/IMG_1894.JPG); }
 
 #section3 {
-  background: url(../img/jana-1.jpg); }
+  background: url(../img/IMG_1899.JPG); }
 
 #section4 {
-  background: url(../img/jana-4.jpg); }
-
-#section1 {
-  background: url(../img/jana-3.jpg); }
+  background: url(../img/IMG_1897.JPG); }
 
 #section5 {
-  background: url(../img/yoga-1.jpg); }
+  background: url(../img/IMG_1891.JPG); }
 
 #section6 {
-  background: url(../img/yoga-2.jpg); }
+  background: url(../img/IMG_1892.JPG); }
 
 #section7 {
-  background: url(../img/yoga-3.jpg); }
+  background: url(../img/IMG_1902.JPG); }
 
 #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
   background-size: cover;
   background-position: center;
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  position: relative; }
 
-/* -------------
+.cd-section {
+  /* vertically align its content*/
+  display: table;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #fff; }
+  .cd-section > div {
+    /* vertically align <div> inside <section> */
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  .cd-section .overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-top: 70px solid #111;
+    border-left: 70px solid #111;
+    border-right: 70px solid #111;
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .cd-section .content-wrapper {
+    position: relative;
+    z-index: 1000; }
+  .cd-section .section-title {
+    font-family: "Anton", sans-serif !important;
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 30px; }
+  .cd-section .flourish {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em; }
+  .cd-section h1 {
+    width: 90%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 4rem; }
+  .cd-section p {
+    margin: 1em auto 0;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    width: 90%;
+    max-width: 680px;
+    text-align: justify;
+    color: #fff; }
+    .cd-section p a {
+      color: inherit; }
+  @media only screen and (min-width: 800px) {
+    .cd-section h1, .cd-section h2 {
+      font-size: 4rem;
+      letter-spacing: 2.5px; }
+    .cd-section p {
+      font-size: 1.4rem;
+      text-transform: uppercase; } }
+
+/* ---------------------------------------------------------------------
 
 # -- section 1
 
----------------- */
+--------------------------------------------------------------------- */
 .site-quote {
   color: #fff;
-  font-family: 'Giraffey';
+  font-family: 'Anton', sans-serif;
   font-size: 5em;
   letter-spacing: 2px;
+  width: max-content !important;
+  line-height: normal;
+  margin: auto;
+  display: block;
+  position: relative;
   -vendor-animation-duration: 6s;
-  -vendor-animation-delay: 3s; }
+  -vendor-animation-delay: 3s;
+  line-height: 80px; }
+  .site-quote .there {
+    font-size: 3.5em !important; }
+  .site-quote .are {
+    font-size: 3em !important; }
+  .site-quote .hundreds {
+    font-size: 3.5em !important;
+    font-family: "Playfair Display", serif !important;
+    color: #70557e !important; }
+    .site-quote .hundreds .s {
+      font-size: 0.5em !important; }
+  .site-quote .the-rest {
+    font-family: "Open Sans Condensed", sans-serif !important; }
 
 /* -------------
 
 # -- section 2
 
 ---------------- */
-#section2.cd-section.about .content-wrapper h2 {
-  clear: both; }
-#section2.cd-section.about .content-wrapper .content {
-  margin: auto;
-  display: flex;
-  width: 90%;
-  justify-content: center; }
-  #section2.cd-section.about .content-wrapper .content p {
-    font-size: 1.2rem !important;
-    text-align: justify;
-    width: 45%; }
-
 /* -------------
 
 # -- section 3
@@ -514,54 +582,6 @@ Content Sections - basic style
 ---------------- */
 #section7.connect .content-wrapper p {
   text-align: center; }
-
-.cd-section {
-  /* vertically align its content*/
-  display: table;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  color: #fff; }
-  .cd-section:nth-of-type(even) {
-    background-color: #70557e; }
-  .cd-section > div {
-    /* vertically align <div> inside <section> */
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center; }
-  .cd-section .overlay-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -5;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .cd-section h1, .cd-section h2 {
-    width: 90%;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-size: 4rem;
-    line-height: 1.4;
-    font-family: 'Giraffey';
-    color: #fff; }
-  .cd-section p {
-    margin: 1em auto 0;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    width: 90%;
-    max-width: 680px;
-    font-family: "Futura LT";
-    text-align: justify; }
-    .cd-section p a {
-      color: inherit; }
-  @media only screen and (min-width: 800px) {
-    .cd-section h1, .cd-section h2 {
-      font-size: 4rem;
-      letter-spacing: 2.5px; }
-    .cd-section p {
-      font-size: 1.4rem;
-      text-transform: uppercase; } }
 
 .cd-scroll-down {
   position: absolute;
