@@ -372,12 +372,14 @@ Vertical navigation
 
 .header-container {
 	position: fixed;
-	top: 10px;
-	left: 10px;
+
 	width: 100%;
-	z-index: 1000;
+	z-index: 1002;
+	// background: #fff;
 
 	.site-title {
+		background: #fff;
+		padding-top: 10px;
 		padding-left: 20px;
 		font-family: 'Moon';
 		font-size: 2em;
@@ -388,15 +390,17 @@ Vertical navigation
 	    -vendor-animation-delay: 3s;
 	}
 	.social {
-		padding: 0;
-		position: absolute;
-		right: 100px;
-		top: 10px;
+		padding-left: 20px;
+		margin-top: 20px;
+		// position: absolute;
+		// right: 100px;
+		// top: 10px;
 
 		li {
 			display: inline-block;
 			padding: 10px;
 			color: #333!important;
+			font-size: 20px;
 
 			a {
 				color: inherit;
@@ -451,10 +455,15 @@ Content Sections - basic style
 
 
 #section1 {
-	background: url(../img/IMG_1893.JPG);
+	// background: url(../img/IMG_1893.JPG);
 }
 #section2 {
 	// background: url(../img/IMG_1894.JPG);
+	// background: url(../img/IMG_1899.JPG);
+background: url(../img/IMG_1897.JPG);
+// background: url(../img/IMG_1891.JPG);
+// background: url(../img/IMG_1892.JPG);
+// background: url(../img/IMG_1902.JPG);
 }
 #section3 {
 	// background: url(../img/IMG_1899.JPG);
@@ -504,10 +513,10 @@ Content Sections - basic style
 	}
 
 	.section-title {
-		font-family: 'Anton', sans-serif!important;
-		color: #333;
+		font-family: 'Playfair Display', serif;
+		// color: #333;
 		font-size: 3.5rem;
-		margin-bottom: 30px;
+		margin: 30px;
 	}
 	.flourish {
 		font-family: 'Playfair Display', serif;
@@ -533,7 +542,7 @@ Content Sections - basic style
 		max-width: 680px;
 		// font-family: "Futura LT";
 		text-align: justify;
-		color: #333;
+		// color: #333;
 
 		a {
 			color: inherit;
@@ -549,7 +558,7 @@ Content Sections - basic style
 
 		p {
 			font-size: 1.4rem;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 		}
 	}
 }
@@ -574,42 +583,78 @@ Content Sections - basic style
 		// border-right: 70px solid #fff;
 		// border-bottom: none;
 	}
+	.text-content {
+		height: 390px;
 
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.img-container {
+		max-height: 500px;
+		height: 100%;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
 	.site-quote {
 		// color: #A29CA2;
-		color: #fff;
-		font-family: 'Anton', sans-serif;
-		font-size: 4em;
+		color: #333;
+		font-family: 'Playfair Display', serif!important;
+
 		letter-spacing: 2px;
 		width: max-content!important;
 		line-height: normal;
 		margin: auto;
 		display: block;
+		// border-bottom: 5px solid #333;
 		position: relative;
 		-vendor-animation-duration: 6s;
 	    -vendor-animation-delay: 3s;
 		line-height: 80px;
 
+		.t {
+			font-size: 2.5em;
+		}
+
 		.there {
-			font-size: 2.5em!important;
+			font-size: 1.75em!important;
 		}
 		.are {
-			font-size: 2em!important;
+			font-size: 1.75em!important;
+			padding-left: 50px;
+			border-left: 5px solid #333;
 		}
 		.hundreds {
-			font-size: 2.5em!important;
+			font-size: 4em!important;
 			// font-family: 'Open Sans Condensed', sans-serif;
-			font-family: 'Playfair Display', serif!important;
+			font-family: 'Anton', sans-serif!important;
 			color: #70557e!important;
 
 			.s {
 				font-size: .5em!important;
 			}
 		}
-		.the-rest {
-			font-family: 'Open Sans Condensed', sans-serif!important;
-		}
 
+	}
+	.hundred-header {
+		position: absolute;
+		top: -20%;
+		left: -15%;
+	}
+	.the-rest {
+		font-size: 2em!important;
+		font-family: 'Playfair Display', serif!important;
+		margin: auto;
+		text-align: center;
+		border-right: 5px solid #333;
+	}
+
+	.squares {
+		padding: 0!important;
+		position: relative;
 	}
 
 
@@ -621,17 +666,50 @@ Content Sections - basic style
 
 /* -------------
 
-# -- section 2
+# -- section 2 About
 
 ---------------- */
+#section2 {
 
+
+	.overlay-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.5);
+		// border: 70px solid #fff;
+		// border-left: 70px solid #fff;
+		// border-right: 70px solid #fff;
+		// border-bottom: none;
+	}
+	.content-wrapper {
+		position: relative;
+		z-index: 1000;
+		color: #fff!important;
+	}
+
+}
 
 
 /* -------------
 
-# -- section 3
+# -- section 3 Classes
 
 ---------------- */
+#section3 {
+	text-align: center;
+	p {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	#yoga-calendar {
+		width: 75%;
+		margin: auto;
+		display: block;
+	}
+}
 
 /* -------------
 

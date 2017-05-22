@@ -403,11 +403,11 @@ Vertical navigation
 -------------------------------- */
 .header-container {
   position: fixed;
-  top: 10px;
-  left: 10px;
   width: 100%;
-  z-index: 1000; }
+  z-index: 1002; }
   .header-container .site-title {
+    background: #fff;
+    padding-top: 10px;
     padding-left: 20px;
     font-family: 'Moon';
     font-size: 2em;
@@ -416,14 +416,13 @@ Vertical navigation
     -vendor-animation-duration: 6s;
     -vendor-animation-delay: 3s; }
   .header-container .social {
-    padding: 0;
-    position: absolute;
-    right: 100px;
-    top: 10px; }
+    padding-left: 20px;
+    margin-top: 20px; }
     .header-container .social li {
       display: inline-block;
       padding: 10px;
-      color: #333 !important; }
+      color: #333 !important;
+      font-size: 20px; }
       .header-container .social li a {
         color: inherit; }
 
@@ -455,8 +454,8 @@ Content Sections - basic style
 				General Section Styles
 
 --------------------------------------------------------------------- */
-#section1 {
-  background: url(../img/IMG_1893.JPG); }
+#section2 {
+  background: url(../img/IMG_1897.JPG); }
 
 #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
   background-size: cover;
@@ -480,10 +479,9 @@ Content Sections - basic style
     position: relative;
     z-index: 1000; }
   .cd-section .section-title {
-    font-family: "Anton", sans-serif !important;
-    color: #333;
+    font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    margin-bottom: 30px; }
+    margin: 30px; }
   .cd-section .flourish {
     font-family: 'Playfair Display', serif;
     font-size: 2em; }
@@ -498,8 +496,7 @@ Content Sections - basic style
     letter-spacing: 2px;
     width: 90%;
     max-width: 680px;
-    text-align: justify;
-    color: #333; }
+    text-align: justify; }
     .cd-section p a {
       color: inherit; }
   @media only screen and (min-width: 800px) {
@@ -507,8 +504,7 @@ Content Sections - basic style
       font-size: 4rem;
       letter-spacing: 2.5px; }
     .cd-section p {
-      font-size: 1.4rem;
-      text-transform: uppercase; } }
+      font-size: 1.4rem; } }
 
 /* ---------------------------------------------------------------------
 
@@ -523,10 +519,20 @@ Content Sections - basic style
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   border: 70px solid #fff; }
+#section1 .text-content {
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+#section1 .img-container {
+  max-height: 500px;
+  height: 100%; }
+  #section1 .img-container img {
+    height: 100%;
+    width: 100%; }
 #section1 .site-quote {
-  color: #fff;
-  font-family: 'Anton', sans-serif;
-  font-size: 4em;
+  color: #333;
+  font-family: "Playfair Display", serif !important;
   letter-spacing: 2px;
   width: max-content !important;
   line-height: normal;
@@ -536,29 +542,66 @@ Content Sections - basic style
   -vendor-animation-duration: 6s;
   -vendor-animation-delay: 3s;
   line-height: 80px; }
+  #section1 .site-quote .t {
+    font-size: 2.5em; }
   #section1 .site-quote .there {
-    font-size: 2.5em !important; }
+    font-size: 1.75em !important; }
   #section1 .site-quote .are {
-    font-size: 2em !important; }
+    font-size: 1.75em !important;
+    padding-left: 50px;
+    border-left: 5px solid #333; }
   #section1 .site-quote .hundreds {
-    font-size: 2.5em !important;
-    font-family: "Playfair Display", serif !important;
+    font-size: 4em !important;
+    font-family: "Anton", sans-serif !important;
     color: #70557e !important; }
     #section1 .site-quote .hundreds .s {
       font-size: 0.5em !important; }
-  #section1 .site-quote .the-rest {
-    font-family: "Open Sans Condensed", sans-serif !important; }
+#section1 .hundred-header {
+  position: absolute;
+  top: -20%;
+  left: -15%; }
+#section1 .the-rest {
+  font-size: 2em !important;
+  font-family: "Playfair Display", serif !important;
+  margin: auto;
+  text-align: center;
+  border-right: 5px solid #333; }
+#section1 .squares {
+  padding: 0 !important;
+  position: relative; }
 
 /* -------------
 
-# -- section 2
+# -- section 2 About
 
 ---------------- */
+#section2 .overlay-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
+#section2 .content-wrapper {
+  position: relative;
+  z-index: 1000;
+  color: #fff !important; }
+
 /* -------------
 
-# -- section 3
+# -- section 3 Classes
 
 ---------------- */
+#section3 {
+  text-align: center; }
+  #section3 p {
+    margin-bottom: 20px;
+    text-align: center; }
+  #section3 #yoga-calendar {
+    width: 75%;
+    margin: auto;
+    display: block; }
+
 /* -------------
 
 # -- section 7
