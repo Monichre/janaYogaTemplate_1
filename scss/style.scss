@@ -495,10 +495,10 @@ Content Sections - basic style
 		left: 0;
 		height: 100%;
 		width: 100%;
-		border-top: 70px solid #111;
-		border-left: 70px solid #111;
-		border-right: 70px solid #111;
-		border-bottom: none;
+		// border-top: 70px solid #111;
+		// border-left: 70px solid #111;
+		// border-right: 70px solid #111;
+		// border-bottom: none;
 		background-color: rgba(0,0,0,0.5);
 	}
 	.content-wrapper {
@@ -507,7 +507,7 @@ Content Sections - basic style
 	}
 
 	.section-title {
-		font-family: 'Anton', sans-serif!important;
+		font-family: 'Playfair Display', serif!important;
 		color: #fff;
 		font-size: 3.5rem;
 		margin-bottom: 30px;
@@ -552,7 +552,7 @@ Content Sections - basic style
 
 		p {
 			font-size: 1.4rem;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 		}
 	}
 }
@@ -568,8 +568,8 @@ Content Sections - basic style
 .site-quote {
 	// color: #A29CA2;
 	color: #fff;
-	font-family: 'Anton', sans-serif;
-	font-size: 5em;
+	font-family: 'Playfair Display', serif!important;
+
 	letter-spacing: 2px;
 	width: max-content!important;
 	line-height: normal;
@@ -581,10 +581,10 @@ Content Sections - basic style
 	line-height: 80px;
 
 	.there {
-		font-size: 3.5em!important;
+		font-size: 2.5em!important;
 	}
 	.are {
-		font-size: 3em!important;
+		font-size: 1.75em!important;
 	}
 	.hundreds {
 		font-size: 3.5em!important;
@@ -597,7 +597,7 @@ Content Sections - basic style
 		}
 	}
 	.the-rest {
-		font-family: 'Open Sans Condensed', sans-serif!important;
+		font-family: 'Playfair Display', serif!important;
 	}
 
 }

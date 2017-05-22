@@ -495,16 +495,12 @@ Content Sections - basic style
     left: 0;
     height: 100%;
     width: 100%;
-    border-top: 70px solid #111;
-    border-left: 70px solid #111;
-    border-right: 70px solid #111;
-    border-bottom: none;
     background-color: rgba(0, 0, 0, 0.5); }
   .cd-section .content-wrapper {
     position: relative;
     z-index: 1000; }
   .cd-section .section-title {
-    font-family: "Anton", sans-serif !important;
+    font-family: "Playfair Display", serif !important;
     color: #fff;
     font-size: 3.5rem;
     margin-bottom: 30px; }
@@ -531,8 +527,7 @@ Content Sections - basic style
       font-size: 4rem;
       letter-spacing: 2.5px; }
     .cd-section p {
-      font-size: 1.4rem;
-      text-transform: uppercase; } }
+      font-size: 1.4rem; } }
 
 /* ---------------------------------------------------------------------
 
@@ -541,8 +536,7 @@ Content Sections - basic style
 --------------------------------------------------------------------- */
 .site-quote {
   color: #fff;
-  font-family: 'Anton', sans-serif;
-  font-size: 5em;
+  font-family: "Playfair Display", serif !important;
   letter-spacing: 2px;
   width: max-content !important;
   line-height: normal;
@@ -553,9 +547,9 @@ Content Sections - basic style
   -vendor-animation-delay: 3s;
   line-height: 80px; }
   .site-quote .there {
-    font-size: 3.5em !important; }
+    font-size: 2.5em !important; }
   .site-quote .are {
-    font-size: 3em !important; }
+    font-size: 1.75em !important; }
   .site-quote .hundreds {
     font-size: 3.5em !important;
     font-family: "Playfair Display", serif !important;
@@ -563,7 +557,7 @@ Content Sections - basic style
     .site-quote .hundreds .s {
       font-size: 0.5em !important; }
   .site-quote .the-rest {
-    font-family: "Open Sans Condensed", sans-serif !important; }
+    font-family: "Playfair Display", serif !important; }
 
 /* -------------
 
