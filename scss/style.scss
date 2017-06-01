@@ -6,6 +6,23 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import './color';
+
+@import './global';
+
+
+@import './variables';
+
+@import './mixins';
+
+@import './cards';
+
+@import './grid';
+
+@import './buttons';
+
+// @import './materialize';
+
 /* --------------------------------
 
 Primary style
@@ -20,18 +37,21 @@ html {
 	font-size: 62.5%;
 }
 
+// font-family: 'Roboto Slab', serif;
+// font-family: 'News Cycle', sans-serif;
+// font-family: 'Barrio', cursive;
+
 body {
 	font: {
 		size: 1.6rem;
-		family: $primary-font; // variables inside partials > _variables.scss
+		family: 'News Cycle', sans-serif;
 	}
-	color: $color-2;
-	background-color: $color-1;
+
 	@include font-smoothing;
 }
 
 a {
-	color: $color-4;
+
 	text-decoration: none;
 }
 
@@ -129,7 +149,7 @@ Vertical navigation
 	@include transform-origin(right bottom);
 	@include transition(transform .2s);
 	@include border-radius;
-	background-color: #fff;
+	background-color: transparent;
 
 	a {
 		display: block;
@@ -139,7 +159,7 @@ Vertical navigation
 		border-bottom: 1px solid rgba($color-1, .1);
 
 		&.active {
-			color: $color-4;
+			color: #363737;
 		}
 	}
 
@@ -149,7 +169,7 @@ Vertical navigation
 	}
 
 	&.open + .cd-nav-trigger {
-		background-color: transparent;
+		background-color: #fff;
 
 		span {
 			background-color: rgba($color-1, 0);
@@ -196,7 +216,7 @@ Vertical navigation
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba($color-3, .8);
+			background: rgba(255,255,255, .8);
 			@include transform(translateX(100%));
 			@include transition(transform .4s);
 		}
@@ -219,10 +239,10 @@ Vertical navigation
 			margin: 1.4em auto;
 			border-bottom: none;
 			font-size: 1.2rem;
-			color: #fff;
+			color: #719DC1;
 
 			&.active {
-				color: #fff;
+				color: #151D24;
 			}
 
 			&::before, &::after {
@@ -241,7 +261,7 @@ Vertical navigation
 				height: 32px;
 				width: 32px;
 				border-radius: 50%;
-				background: #fff;
+				background: #719DC1;
 				@include transform(translateX(-50%) scale(.25));
 				@include transition(transform .4s, background-color .2s);
 			}
@@ -259,9 +279,51 @@ Vertical navigation
 
 			&.active::before,
 			.no-touch &:hover::before {
-				background-color: $color-4;
+				background-color: #151D24;
 			}
 		}
+		// #section1-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section2-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section3-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section4-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section5-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section6-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
+		// #section7-link .svg {
+		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
+		// 	height: 16px;
+		// 	width: 16px;
+		// 	background-position: 0px 0px;
+		// }
 
 		li:first-of-type a::after {
 			/* change icon using image sprites */
@@ -409,29 +471,15 @@ Content Sections - basic style
 
 // # -- section Fonts
 
-@font-face {
-    font-family: 'Ginva';
-    src: url('../fonts/Ginva.ttf');
-}
-@font-face {
-    font-family: 'Voga';
-    src: url('../fonts/voga-medium.otf');
-}
-@font-face {
-    font-family: 'Noway';
-    src: url('../fonts/noway.ttf');
-}
-@font-face {
-    font-family: 'Moon';
-    src: url('../fonts/Moon.otf');
-}
-@font-face {
-    font-family: 'Moon-bold';
-    src: url('../fonts/Moon-bold.otf');
-}
-@font-face {
-    font-family: 'Giraffey';
-    src: url('../fonts/Giraffey.otf');
+.svg-icon {
+
+	padding: 5px;
+
+	img {
+		height: 33px;
+		width: 33px;
+		color: #263238;
+	}
 }
 
 
@@ -443,25 +491,67 @@ Content Sections - basic style
 
 
 #section1 {
-	background: url(../img/IMG_1893.JPG);
+	// background-image: url(../img/janayoga.jpg);
+	// background-image: url(../img/janayoga.jpg);
+	// background: url(../img/bg.jpg), url(../img/janayoga.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/janayoga.jpg);
+
 }
 #section2 {
-	background: url(../img/IMG_1894.JPG);
+	// background-image: url(../img/about.jpg);
+	// background-image: url(../img/about.jpg);
+	// background: url(../img/bg.jpg), url(../img/about.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/about.jpg);
+
 }
 #section3 {
-	background: url(../img/IMG_1899.JPG);
+	// background-image: url(../img/classes1.jpg);
+	// background-image: url(../img/classes1.jpg);
+	// background: url(../img/bg.jpg), url(../img/classes1.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/classes1.jpg);
+
 }
 #section4 {
-	background: url(../img/IMG_1897.JPG);
+	// background-image: url(../img/privatelessons.jpg);
+	// background-image: url(../img/privatelessons.jpg);
+	// background: url(../img/bg.jpg), url(../img/privatelessons.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/privatelessons.jpg);
+
 }
 #section5 {
-	background: url(../img/IMG_1891.JPG);
+	// background-image: url(../img/retreats.jpg);
+	// background-image: url(../img/retreats.jpg);
+	// background: url(../img/bg.jpg), url(../img/retreats.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/retreats.jpg);
+
 }
 #section6 {
-	background: url(../img/IMG_1892.JPG);
+	// background-image: url(../img/massage.jpg);
+	// background-image: url(../img/massage.jpg);
+	// background: url(../img/bg.jpg), url(../img/massage.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/massage.jpg);
+
 }
 #section7 {
-	background: url(../img/IMG_1902.JPG);
+	// background-image: url(../img/connect.jpg);
+	// background-image: url(../img/connect.jpg);
+	// background: url(../img/bg.jpg), url(../img/connect.jpg);
+	// background-blend-mode: multiply;
+	// mix-blend-mode: exclusion;
+	background: url(../img/connect.jpg);
+
 }
 
 
@@ -473,20 +563,23 @@ Content Sections - basic style
 	background-attachment: fixed;
 	position: relative;
 }
+.section {
+	padding: 0;
+}
 
 .cd-section {
 	/* vertically align its content*/
-	display: table;
-	width: 100%;
-	height: 100vh;
-	position: relative;
+	// display: table;
+	// width: 100%;
+	// height: 100vh;
+	// position: relative;
 	color: #fff;
 
 	> div {
 		/* vertically align <div> inside <section> */
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
+		// display: table-cell;
+		// vertical-align: middle;
+		// text-align: center;
 	}
 
 	.overlay-bg {
@@ -506,15 +599,25 @@ Content Sections - basic style
 		z-index: 1000;
 	}
 
+	.card {
+		.card-panel {
+			margin-left: -100px;
+		}
+	}
+
 	.section-title {
-		font-family: 'Playfair Display', serif!important;
-		color: #fff;
-		font-size: 3.5rem;
+		font-family: 'News Cycle', sans-serif;
+		font-weight: bold;
+		font-size: 5.5rem;
+		// text-align: center;
 		margin-bottom: 30px;
+		color: #fff;
 	}
 	.flourish {
-		font-family: 'Playfair Display', serif;
+		font-family: 'News Cycle', sans-serif;
 		font-size: 2em;
+		line-height: 20px;
+		font-weight: bold;
 	}
 
 	h1 {
@@ -522,21 +625,41 @@ Content Sections - basic style
 		margin: 0 auto;
 		text-transform: uppercase;
 		font-size: 4rem;
+		text-align: center;
 
 		b {
 
 		}
 	}
+	.card-content {
+		p {
+
+			line-height: 1.5;
+			letter-spacing: 2px;
+
+			max-width: 680px;
+			color: #617073;
+			font-weight: 500;
+			font-family: "Futura LT";
+			// text-align: justify;
+
+
+			a {
+				color: inherit;
+			}
+		}
+	}
 
 	p {
-		margin: 1em auto 0;
+
 		line-height: 1.5;
 		letter-spacing: 2px;
-		width: 90%;
-		max-width: 680px;
+
+
+		color: #617073;
 		// font-family: "Futura LT";
-		text-align: justify;
-		color: #fff;
+		// text-align: justify;
+
 
 		a {
 			color: inherit;
@@ -565,45 +688,6 @@ Content Sections - basic style
 --------------------------------------------------------------------- */
 
 
-.site-quote {
-	// color: #A29CA2;
-	color: #fff;
-	font-family: 'Playfair Display', serif!important;
-
-	letter-spacing: 2px;
-	width: max-content!important;
-	line-height: normal;
-	margin: auto;
-	display: block;
-	position: relative;
-	-vendor-animation-duration: 6s;
-    -vendor-animation-delay: 3s;
-	line-height: 80px;
-
-	.there {
-		font-size: 2.5em!important;
-	}
-	.are {
-		font-size: 1.75em!important;
-	}
-	.hundreds {
-		font-size: 3.5em!important;
-		// font-family: 'Open Sans Condensed', sans-serif;
-		font-family: 'Playfair Display', serif!important;
-		color: #70557e!important;
-
-		.s {
-			font-size: .5em!important;
-		}
-	}
-	.the-rest {
-		font-family: 'Playfair Display', serif!important;
-	}
-
-}
-
-
-
 /* -------------
 
 # -- section 2
@@ -618,6 +702,37 @@ Content Sections - basic style
 
 ---------------- */
 
+#section3 {
+
+	h2 {
+		display: inline!important;
+	}
+
+	.cd-section {
+		.section-title {
+			display: inline!important;
+		}
+	}
+
+	>.card {
+		.card-content {
+			.card-panel {
+				margin-left: auto;
+				transition: box-shadow .25s;
+				padding: 10px;
+				/* margin: 0.5rem 0 1rem 0; */
+				border-radius: 2px;
+
+				.card-title {
+					.section-title {
+						display: inline!important;
+					}
+				}
+			}
+		}
+	}
+}
+
 /* -------------
 
 # -- section 7
@@ -630,16 +745,6 @@ Content Sections - basic style
 			text-align: center;
 		}
 	}
-}
-
-
-.cd-scroll-down {
-	position: absolute;
-	@include center(x);
-	bottom: 20px;
-	width: 44px;
-	height: 44px;
-	background: url(../img/cd-arrow-bottom.svg) no-repeat center center;
 }
 
 /* --------------------------------
