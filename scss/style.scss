@@ -6,14 +6,31 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+/* --------------------------------
+		Materialize
+-------------------------------- */
+
 @import './color';
-
-@import './global';
-
 
 @import './variables';
 
 @import './mixins';
+
+@import './global';
+
+/* --------------------------------
+		Materialize Forms
+-------------------------------- */
+@import './forms/forms';
+
+@import './forms/input-fields';
+
+@import './forms/range';
+
+@import './forms/select';
+
+
+// End Forms
 
 @import './cards';
 
@@ -21,7 +38,7 @@
 
 @import './buttons';
 
-// @import './materialize';
+
 
 /* --------------------------------
 
@@ -242,7 +259,7 @@ Vertical navigation
 			color: #719DC1;
 
 			&.active {
-				color: #151D24;
+				color: #1F2B35;
 			}
 
 			&::before, &::after {
@@ -262,6 +279,7 @@ Vertical navigation
 				width: 32px;
 				border-radius: 50%;
 				background: #719DC1;
+				box-shadow: -5px -5px 20px rgba(0,0,0,.5);
 				@include transform(translateX(-50%) scale(.25));
 				@include transition(transform .4s, background-color .2s);
 			}
@@ -279,7 +297,7 @@ Vertical navigation
 
 			&.active::before,
 			.no-touch &:hover::before {
-				background-color: #151D24;
+				background-color: #1F2B35;
 			}
 		}
 		// #section1-link .svg {
@@ -388,6 +406,7 @@ Vertical navigation
 		}
 
 		.label {
+			font-size: 16px;
 			display: block;
 			/* Force Hardware Acceleration */
 			@include backface-visibility(hidden);
@@ -426,35 +445,70 @@ Vertical navigation
 
 .header-container {
 	position: fixed;
-	top: 10px;
-	left: 10px;
-	width: 100%;
+	top: 25px;
+	left: 30px;
+	width: max-content;
 	z-index: 1000;
 
-	.site-title {
-		padding-left: 20px;
-		font-family: 'Moon';
-		font-size: 2em;
-		color: #fff;
-		font-family: 'Playfair Display', serif!important;
+	.logo {
+		background: url(../img/logo.png);
+		height: 144px;
+		width: 144px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
 
-		-vendor-animation-duration: 6s;
-	    -vendor-animation-delay: 3s;
-	}
-	.social {
-		padding: 0;
-		position: absolute;
-		right: 100px;
-		top: 10px;
+		.site-title {
+			font-size: 2.25em;
+			color: #fff;
+			font-family: 'Roboto Slab', serif;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 23px;
+			text-align: center;
+			// opacity: .7;
+			text-shadow: -5px -5px 10px rgba(0,0,0,.5);
+		}
+		.social {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			list-style-type: none;
 
-		li {
-			display: inline-block;
-			padding: 10px;
-			color: #fff!important;
 
-			a {
-				color: inherit;
+			.fa {
+				text-shadow: -5px -5px 10px rgba(0,0,0,.5);
+				font-size: 20px;
+				color: #fff;
 			}
+
+		}
+		#facebook {
+			top:-10px;
+			left: 0;
+		}
+		#instagram{
+			width: auto;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		#email {
+			bottom: -10px;
+			left: 0;
+		}
+		#twitter {
+			width: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 }
@@ -472,13 +526,14 @@ Content Sections - basic style
 // # -- section Fonts
 
 .svg-icon {
-
+	text-shadow: -5px -5px 10px rgba(0,0,0,.5);
 	padding: 5px;
 
 	img {
 		height: 33px;
 		width: 33px;
 		color: #263238;
+		text-shadow: -5px -5px 10px rgba(0,0,0,.5);
 	}
 }
 
@@ -568,19 +623,6 @@ Content Sections - basic style
 }
 
 .cd-section {
-	/* vertically align its content*/
-	// display: table;
-	// width: 100%;
-	// height: 100vh;
-	// position: relative;
-	color: #fff;
-
-	> div {
-		/* vertically align <div> inside <section> */
-		// display: table-cell;
-		// vertical-align: middle;
-		// text-align: center;
-	}
 
 	.overlay-bg {
 		position: absolute;
@@ -588,12 +630,9 @@ Content Sections - basic style
 		left: 0;
 		height: 100%;
 		width: 100%;
-		// border-top: 70px solid #111;
-		// border-left: 70px solid #111;
-		// border-right: 70px solid #111;
-		// border-bottom: none;
 		background-color: rgba(0,0,0,0.5);
 	}
+
 	.content-wrapper {
 		position: relative;
 		z-index: 1000;
@@ -601,17 +640,33 @@ Content Sections - basic style
 
 	.card {
 		.card-panel {
-			margin-left: -100px;
+			transition: box-shadow .25s;
+			border-radius: 2px;
+			background: #DBDBDB url(../img/panel-bg.png) repeat;
+			background-size: 46px 29px;
+			border-bottom: 1px solid #E5E5E5;
+		}
+		.card-image {
+			overflow: hidden;
+			img {
+				// max-height: 230px;
+
+			}
+
+
 		}
 	}
 
 	.section-title {
-		font-family: 'News Cycle', sans-serif;
-		font-weight: bold;
+		font-family: 'Roboto Slab', sans-serif;
 		font-size: 5.5rem;
-		// text-align: center;
-		margin-bottom: 30px;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: -5px;
+		font-size: 4.5rem;
+		display: inline;
 		color: #fff;
+		text-shadow: -5px -5px 10px rgba(0,0,0,.5);
 	}
 	.flourish {
 		font-family: 'News Cycle', sans-serif;
@@ -620,29 +675,14 @@ Content Sections - basic style
 		font-weight: bold;
 	}
 
-	h1 {
-		width: 90%;
-		margin: 0 auto;
-		text-transform: uppercase;
-		font-size: 4rem;
-		text-align: center;
-
-		b {
-
-		}
-	}
 	.card-content {
 		p {
-
 			line-height: 1.5;
 			letter-spacing: 2px;
-
 			max-width: 680px;
 			color: #617073;
 			font-weight: 500;
 			font-family: "Futura LT";
-			// text-align: justify;
-
 
 			a {
 				color: inherit;
@@ -650,27 +690,11 @@ Content Sections - basic style
 		}
 	}
 
-	p {
-
-		line-height: 1.5;
-		letter-spacing: 2px;
-
-
-		color: #617073;
-		// font-family: "Futura LT";
-		// text-align: justify;
-
-
-		a {
-			color: inherit;
-		}
-	}
-
 	@include MQ(M) {
 
 		h1, h2 {
-			font-size: 4rem;
-			letter-spacing: 2.5px
+			// font-size: 4rem;
+			// letter-spacing: 2.5px
 		}
 
 		p {
@@ -688,11 +712,22 @@ Content Sections - basic style
 --------------------------------------------------------------------- */
 
 
+
+
 /* -------------
 
 # -- section 2
 
 ---------------- */
+
+#section2 {
+	.card {
+		margin-top: 100px;
+		.card-panel {
+			margin-left: -100px;
+		}
+	}
+}
 
 
 
@@ -702,11 +737,8 @@ Content Sections - basic style
 
 ---------------- */
 
-#section3 {
+#section2, #section3, #section4, #section5, #section6, #section7 {
 
-	h2 {
-		display: inline!important;
-	}
 
 	.cd-section {
 		.section-title {
@@ -714,23 +746,6 @@ Content Sections - basic style
 		}
 	}
 
-	>.card {
-		.card-content {
-			.card-panel {
-				margin-left: auto;
-				transition: box-shadow .25s;
-				padding: 10px;
-				/* margin: 0.5rem 0 1rem 0; */
-				border-radius: 2px;
-
-				.card-title {
-					.section-title {
-						display: inline!important;
-					}
-				}
-			}
-		}
-	}
 }
 
 /* -------------
@@ -739,12 +754,31 @@ Content Sections - basic style
 
 ---------------- */
 
-#section7.connect {
-	.content-wrapper {
-		p {
-			text-align: center;
-		}
+#section7 {
+
+	.card {
+		background-color: rgba(255,255,255, .3);
 	}
+
+	input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+	}
+	label {
+		color: #fff;
+	}
+
 }
 
 /* --------------------------------
