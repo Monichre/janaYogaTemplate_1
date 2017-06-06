@@ -4125,7 +4125,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -4140,12 +4140,6 @@ a {
   white-space: nowrap;
   color: transparent; }
 
-@font-face {
-  font-family: 'Ginva';
-  src: url("../fonts/Ginva.ttf"); }
-@font-face {
-  font-family: 'Voga';
-  src: url("../fonts/voga-medium.otf"); }
 /* --------------------------------
 
 Navigation trigger - visible on small devices only
@@ -4516,7 +4510,6 @@ Vertical navigation
   width: max-content;
   z-index: 1000; }
   .header-container .logo {
-    background: url(../img/logo.png);
     height: 144px;
     width: 144px;
     display: flex;
@@ -4632,7 +4625,7 @@ Content Sections - basic style
 .cd-section .card .card-image {
   overflow: hidden; }
 .cd-section .section-title {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 5.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -4642,7 +4635,7 @@ Content Sections - basic style
   color: #fff;
   text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
 .cd-section .flourish {
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2em;
   line-height: 20px;
   font-weight: bold; }
@@ -4652,7 +4645,7 @@ Content Sections - basic style
   max-width: 680px;
   color: #617073;
   font-weight: 500;
-  font-family: "Futura LT"; }
+  font-family: 'Open Sans', sans-serif; }
   .cd-section .card-content p a {
     color: inherit; }
 @media only screen and (min-width: 800px) {
