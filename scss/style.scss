@@ -157,7 +157,7 @@ Vertical navigation
 	@include transform-origin(right bottom);
 	@include transition(transform .2s);
 	@include border-radius;
-	background-color: transparent;
+
 
 	a {
 		display: block;
@@ -174,10 +174,13 @@ Vertical navigation
 	&.open {
 		@include transform(scale(1));
 		-webkit-overflow-scrolling: touch;
+		background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+	    background-size: 46px 29px;
 	}
 
 	&.open + .cd-nav-trigger {
-		background-color: #fff;
+		background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+	    background-size: 46px 29px;
 
 		span {
 			background-color: rgba($color-1, 0);
@@ -224,7 +227,8 @@ Vertical navigation
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(255,255,255, .8);
+			background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+		    background-size: 46px 29px;
 			@include transform(translateX(100%));
 			@include transition(transform .4s);
 		}
@@ -291,49 +295,6 @@ Vertical navigation
 				background-color: #1F2B35;
 			}
 		}
-		// #section1-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section2-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section3-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section4-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section5-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section6-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-		// #section7-link .svg {
-		// 	background: url(../img/woman-laying-down-lifting-head.svg) no-repeat;
-		// 	height: 16px;
-		// 	width: 16px;
-		// 	background-position: 0px 0px;
-		// }
-
 		li:first-of-type a::after {
 			/* change icon using image sprites */
 			background-position: 0px -48px;
@@ -397,8 +358,9 @@ Vertical navigation
 		}
 
 		.label {
-			font-size: 16px;
+			font-size: 14px;
 			display: block;
+			font-family: 'Open Sans', sans-serif;
 			/* Force Hardware Acceleration */
 			@include backface-visibility(hidden);
 			@include transform(translateZ(0));
@@ -436,26 +398,19 @@ Vertical navigation
 
 .header-container {
 	position: fixed;
-	top: 25px;
+	top: 100px;
 	left: 30px;
 	width: max-content;
 	z-index: 1000;
 
 	.logo {
-		// background: url(../img/logo.png);
-		height: 144px;
-		width: 144px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		position: relative;
 
 		.site-title {
 			font-size: 2.25em;
 			color: #fff;
-			font-family: 'Roboto Slab', serif;
-			font-weight: bold;
-			text-transform: uppercase;
+			font-family: 'Playfair Display', serif;
+			// text-transform: uppercase;
 			line-height: 23px;
 			text-align: center;
 			// opacity: .7;
@@ -546,68 +501,29 @@ Content Sections - basic style
 
 }
 #section2 {
-	// background-image: url(../img/about.jpg);
-	// background-image: url(../img/about.jpg);
-	// background: url(../img/bg.jpg), url(../img/about.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
 	background: url(../img/about.jpg);
-
 }
 #section3 {
-	// background-image: url(../img/classes1.jpg);
-	// background-image: url(../img/classes1.jpg);
-	// background: url(../img/bg.jpg), url(../img/classes1.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
 	background: url(../img/classes1.jpg);
-
 }
 #section4 {
-	// background-image: url(../img/privatelessons.jpg);
-	// background-image: url(../img/privatelessons.jpg);
-	// background: url(../img/bg.jpg), url(../img/privatelessons.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
 	background: url(../img/privatelessons.jpg);
-
-}
-#section5 {
-	// background-image: url(../img/retreats.jpg);
-	// background-image: url(../img/retreats.jpg);
-	// background: url(../img/bg.jpg), url(../img/retreats.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
-	background: url(../img/retreats.jpg);
-
 }
 #section6 {
-	// background-image: url(../img/massage.jpg);
-	// background-image: url(../img/massage.jpg);
-	// background: url(../img/bg.jpg), url(../img/massage.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
 	background: url(../img/massage.jpg);
-
 }
 #section7 {
-	// background-image: url(../img/connect.jpg);
-	// background-image: url(../img/connect.jpg);
-	// background: url(../img/bg.jpg), url(../img/connect.jpg);
-	// background-blend-mode: multiply;
-	// mix-blend-mode: exclusion;
 	background: url(../img/connect.jpg);
-
 }
-
-
 #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
 	background-size: cover;
 	background-position: center;
-	// -webkit-filter: grayscale(100%);
-	// filter: gray;
-	background-attachment: fixed;
 	position: relative;
+}
+#section5 {
+	background: url(../img/retreats.jpg);
+	background-position: 0 90%;
+    background-size: cover;
 }
 .section {
 	padding: 0;
@@ -628,36 +544,16 @@ Content Sections - basic style
 		position: relative;
 		z-index: 1000;
 	}
-
-	.card {
-		.card-panel {
-			transition: box-shadow .25s;
-			border-radius: 2px;
-			background: #DBDBDB url(../img/panel-bg.png) repeat;
-			background-size: 46px 29px;
-			border-bottom: 1px solid #E5E5E5;
-		}
-		.card-image {
-			overflow: hidden;
-			img {
-				// max-height: 230px;
-
-			}
-
-
-		}
-	}
-
 	.section-title {
 		font-family: 'Playfair Display', serif;
-		font-size: 5.5rem;
-		text-transform: uppercase;
-		font-weight: 700;
-		letter-spacing: -5px;
+
+
 		font-size: 4.5rem;
-		display: inline;
+		display: block;
+		margin: 0 auto 20px;
+		text-align: center;
 		color: #fff;
-		text-shadow: -5px -5px 10px rgba(0,0,0,.5);
+
 	}
 	.flourish {
 		font-family: 'Playfair Display', serif;
@@ -666,14 +562,16 @@ Content Sections - basic style
 		font-weight: bold;
 	}
 
-	.card-content {
+	.content {
 		p {
 			line-height: 1.5;
 			letter-spacing: 2px;
 			max-width: 680px;
-			color: #617073;
+			text-align: center;
 			font-weight: 500;
 			font-family: 'Open Sans', sans-serif;
+			margin: auto;
+			display: block;
 
 			a {
 				color: inherit;
@@ -684,13 +582,12 @@ Content Sections - basic style
 	@include MQ(M) {
 
 		h1, h2 {
-			// font-size: 4rem;
-			// letter-spacing: 2.5px
+
 		}
 
 		p {
-			font-size: 1.4rem;
-			// text-transform: uppercase;
+
+
 		}
 	}
 }
@@ -705,37 +602,34 @@ Content Sections - basic style
 
 
 
-/* -------------
+/* ---------------------------------------------------------------------
 
 # -- section 2
 
----------------- */
+--------------------------------------------------------------------- */
 
 #section2 {
-	.card {
-		margin-top: 100px;
-		.card-panel {
-			margin-left: -100px;
+	.content {
+
+
+		p {
+			text-align: left;
+			padding: 10px;
+			line-height: initial;
+    		font-weight: 500;
 		}
 	}
 }
 
-
-
-/* -------------
+/* ---------------------------------------------------------------------
 
 # -- section 3
 
----------------- */
+--------------------------------------------------------------------- */
 
 #section2, #section3, #section4, #section5, #section6, #section7 {
 
 
-	.cd-section {
-		.section-title {
-			display: inline!important;
-		}
-	}
 
 }
 
@@ -746,29 +640,6 @@ Content Sections - basic style
 ---------------- */
 
 #section7 {
-
-	.card {
-		background-color: rgba(255,255,255, .3);
-	}
-
-	input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    border-radius: 0;
-    outline: none;
-    height: 3rem;
-    width: 100%;
-    font-size: 1rem;
-    margin: 0 0 20px 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: content-box;
-    transition: all 0.3s;
-	}
-	label {
-		color: #fff;
-	}
 
 }
 
@@ -819,6 +690,7 @@ no-js
 	}
 
 	.label {
+		font-family: 'Open Sans', sans-serif;
 		@include transform(translateX(0));
 	}
 }

@@ -4224,8 +4224,7 @@ Vertical navigation
   -webkit-transition: -webkit-transform 0.2s;
   -moz-transition: -moz-transform 0.2s;
   transition: transform 0.2s;
-  border-radius: 0.25em;
-  background-color: transparent; }
+  border-radius: 0.25em; }
   .cd-vertical-nav a {
     display: block;
     padding: 1em;
@@ -4240,9 +4239,12 @@ Vertical navigation
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    -webkit-overflow-scrolling: touch; }
+    -webkit-overflow-scrolling: touch;
+    background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+    background-size: 46px 29px; }
   .cd-vertical-nav.open + .cd-nav-trigger {
-    background-color: #fff; }
+    background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+    background-size: 46px 29px; }
     .cd-vertical-nav.open + .cd-nav-trigger span {
       background-color: rgba(58, 44, 65, 0); }
     .cd-vertical-nav.open + .cd-nav-trigger span::before, .cd-vertical-nav.open + .cd-nav-trigger span::after {
@@ -4291,7 +4293,8 @@ Vertical navigation
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(255, 255, 255, 0.8);
+        background: #DBDBDB url(../img/escheresque_@2X.png) repeat;
+        background-size: 46px 29px;
         -webkit-transform: translateX(100%);
         -moz-transform: translateX(100%);
         -ms-transform: translateX(100%);
@@ -4460,8 +4463,9 @@ Vertical navigation
         -o-transform: translateX(-50%) translateY(-14.5em) scale(0.25);
         transform: translateX(-50%) translateY(-14.5em) scale(0.25); }
       .cd-vertical-nav .label {
-        font-size: 16px;
+        font-size: 14px;
         display: block;
+        font-family: 'Open Sans', sans-serif;
         /* Force Hardware Acceleration */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -4505,23 +4509,16 @@ Vertical navigation
 -------------------------------- */
 .header-container {
   position: fixed;
-  top: 25px;
+  top: 100px;
   left: 30px;
   width: max-content;
   z-index: 1000; }
   .header-container .logo {
-    height: 144px;
-    width: 144px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: relative; }
     .header-container .logo .site-title {
       font-size: 2.25em;
       color: #fff;
-      font-family: 'Roboto Slab', serif;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
       line-height: 23px;
       text-align: center;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
@@ -4588,9 +4585,6 @@ Content Sections - basic style
 #section4 {
   background: url(../img/privatelessons.jpg); }
 
-#section5 {
-  background: url(../img/retreats.jpg); }
-
 #section6 {
   background: url(../img/massage.jpg); }
 
@@ -4600,8 +4594,12 @@ Content Sections - basic style
 #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   position: relative; }
+
+#section5 {
+  background: url(../img/retreats.jpg);
+  background-position: 0 90%;
+  background-size: cover; }
 
 .section {
   padding: 0; }
@@ -4616,89 +4614,56 @@ Content Sections - basic style
 .cd-section .content-wrapper {
   position: relative;
   z-index: 1000; }
-.cd-section .card .card-panel {
-  transition: box-shadow .25s;
-  border-radius: 2px;
-  background: #DBDBDB url(../img/panel-bg.png) repeat;
-  background-size: 46px 29px;
-  border-bottom: 1px solid #E5E5E5; }
-.cd-section .card .card-image {
-  overflow: hidden; }
 .cd-section .section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 5.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: -5px;
   font-size: 4.5rem;
-  display: inline;
-  color: #fff;
-  text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
+  display: block;
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #fff; }
 .cd-section .flourish {
   font-family: 'Playfair Display', serif;
   font-size: 2em;
   line-height: 20px;
   font-weight: bold; }
-.cd-section .card-content p {
+.cd-section .content p {
   line-height: 1.5;
   letter-spacing: 2px;
   max-width: 680px;
-  color: #617073;
+  text-align: center;
   font-weight: 500;
-  font-family: 'Open Sans', sans-serif; }
-  .cd-section .card-content p a {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  display: block; }
+  .cd-section .content p a {
     color: inherit; }
-@media only screen and (min-width: 800px) {
-  .cd-section p {
-    font-size: 1.4rem; } }
 
 /* ---------------------------------------------------------------------
 
 # -- section 1
 
 --------------------------------------------------------------------- */
-/* -------------
+/* ---------------------------------------------------------------------
 
 # -- section 2
 
----------------- */
-#section2 .card {
-  margin-top: 100px; }
-  #section2 .card .card-panel {
-    margin-left: -100px; }
+--------------------------------------------------------------------- */
+#section2 .content p {
+  text-align: left;
+  padding: 10px;
+  line-height: initial;
+  font-weight: 500; }
 
-/* -------------
+/* ---------------------------------------------------------------------
 
 # -- section 3
 
----------------- */
-#section2 .cd-section .section-title, #section3 .cd-section .section-title, #section4 .cd-section .section-title, #section5 .cd-section .section-title, #section6 .cd-section .section-title, #section7 .cd-section .section-title {
-  display: inline !important; }
-
+--------------------------------------------------------------------- */
 /* -------------
 
 # -- section 7
 
 ---------------- */
-#section7 .card {
-  background-color: rgba(255, 255, 255, 0.3); }
-#section7 input[type=text], #section7 input[type=password], #section7 input[type=email], #section7 input[type=url], #section7 input[type=time], #section7 input[type=date], #section7 input[type=datetime], #section7 input[type=datetime-local], #section7 input[type=tel], #section7 input[type=number], #section7 input[type=search], #section7 textarea.materialize-textarea {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #fff;
-  border-radius: 0;
-  outline: none;
-  height: 3rem;
-  width: 100%;
-  font-size: 1rem;
-  margin: 0 0 20px 0;
-  padding: 0;
-  box-shadow: none;
-  box-sizing: content-box;
-  transition: all 0.3s; }
-#section7 label {
-  color: #fff; }
-
 /* --------------------------------
 
 no-js
@@ -4737,6 +4702,7 @@ no-js
   .no-js .cd-vertical-nav a::after, .no-js .cd-vertical-nav a::before {
     display: none; }
   .no-js .cd-vertical-nav .label {
+    font-family: 'Open Sans', sans-serif;
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
