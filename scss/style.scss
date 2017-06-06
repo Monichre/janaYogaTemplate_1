@@ -254,7 +254,7 @@ Vertical navigation
 			color: #719DC1;
 
 			&.active {
-				color: #1F2B35;
+				// color: #1F2B35;
 			}
 
 			&::before, &::after {
@@ -285,19 +285,19 @@ Vertical navigation
 				top: 8px;
 				height: 16px;
 				width: 16px;
-				background: url(../img/cd-nav-icons.svg) no-repeat;
+				background: url(../img/lotus.svg) no-repeat;
 				@include transform(translateX(-50%) scale(0));
 				@include transition(transform .4s 0s, opacity .1s .3s);
 			}
 
 			&.active::before,
 			.no-touch &:hover::before {
-				background-color: #1F2B35;
+				// background-color: #1F2B35;
 			}
 		}
 		li:first-of-type a::after {
 			/* change icon using image sprites */
-			background-position: 0px -48px;
+			background-position: 0px 0px;
 			/* fix bug with transitions - set scale(0.01) rather than scale(0) */
 			@include transform(translateX(-50%) translateY(4.5em) scale(0.01));
 		}
@@ -307,7 +307,7 @@ Vertical navigation
 		}
 
 		li:nth-of-type(2) a::after {
-			background-position: 0px -32px;
+			background-position: 0px 0px;
 			@include transform(translateX(-50%) translateY(1.5em) scale(0.01));
 		}
 
@@ -316,7 +316,7 @@ Vertical navigation
 		}
 
 		li:nth-of-type(3) a::after {
-			background-position: 0px -16px;
+			background-position: 0px 0px;
 			@include transform(translateX(-50%) translateY(-1.5em) scale(0.01));
 		}
 
