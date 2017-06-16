@@ -62,6 +62,7 @@ body {
 	font: {
 		size: 1.6rem;
 		family: 'Open Sans', sans-serif;
+		color: #fff;
 	}
 
 	@include font-smoothing;
@@ -404,13 +405,16 @@ Vertical navigation
 	z-index: 1000;
 
 	.logo {
+
+		font-family: 'Slabo 27px', serif;
+		font-family: 'Oswald', sans-serif;
+		font-family: 'Spectral', serif;
 		position: relative;
 
 		.site-title {
 			font-size: 2.25em;
 			color: #fff;
-			font-family: 'Playfair Display', serif;
-			// text-transform: uppercase;
+			font-family: 'Spectral', serif;
 			line-height: 23px;
 			text-align: center;
 			// opacity: .7;
@@ -459,15 +463,6 @@ Vertical navigation
 	}
 }
 
-/* --------------------------------
-
-Content Sections - basic style
-
--------------------------------- */
-
-
-
-
 
 // # -- section Fonts
 
@@ -501,13 +496,14 @@ Content Sections - basic style
 
 }
 #section2 {
-	background: url(../img/about.jpg);
+	background: url(../img/privatelessons.jpg);
 }
 #section3 {
 	background: url(../img/classes1.jpg);
 }
 #section4 {
-	background: url(../img/privatelessons.jpg);
+
+	background: url(../img/about.jpg);
 }
 #section6 {
 	background: url(../img/massage.jpg);
@@ -530,6 +526,7 @@ Content Sections - basic style
 }
 
 .cd-section {
+	position: relative;
 
 	.overlay-bg {
 		position: absolute;
@@ -537,7 +534,7 @@ Content Sections - basic style
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.3);
 	}
 
 	.content-wrapper {
@@ -545,7 +542,7 @@ Content Sections - basic style
 		z-index: 1000;
 	}
 	.section-title {
-		font-family: 'Playfair Display', serif;
+		font-family: 'Spectral', serif;
 
 
 		font-size: 4.5rem;
@@ -556,10 +553,10 @@ Content Sections - basic style
 
 	}
 	.flourish {
-		font-family: 'Playfair Display', serif;
-		font-size: 2em;
+		// font-family: 'Playfair Display', serif;
+		font-size: 1.5em;
 		line-height: 20px;
-		font-weight: bold;
+
 	}
 
 	.content {
@@ -572,6 +569,8 @@ Content Sections - basic style
 			font-family: 'Open Sans', sans-serif;
 			margin: auto;
 			display: block;
+			font-size: .9em;
+			color: #fff;
 
 			a {
 				color: inherit;
@@ -609,15 +608,20 @@ Content Sections - basic style
 --------------------------------------------------------------------- */
 
 #section2 {
+
 	.content {
 
-
-		p {
-			text-align: left;
-			padding: 10px;
-			line-height: initial;
-    		font-weight: 500;
+		.section-title {
+			color: #fff;
 		}
+	}
+
+	p {
+		text-align: left;
+		padding: 10px;
+		line-height: initial;
+		font-weight: 500;
+		color: #fff;
 	}
 }
 
@@ -627,11 +631,6 @@ Content Sections - basic style
 
 --------------------------------------------------------------------- */
 
-#section2, #section3, #section4, #section5, #section6, #section7 {
-
-
-
-}
 
 /* -------------
 

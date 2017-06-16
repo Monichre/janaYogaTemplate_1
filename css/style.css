@@ -4126,6 +4126,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Open Sans', sans-serif;
+  font-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -4510,11 +4511,14 @@ Vertical navigation
   width: max-content;
   z-index: 1000; }
   .header-container .logo {
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Spectral', serif;
     position: relative; }
     .header-container .logo .site-title {
       font-size: 2.25em;
       color: #fff;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Spectral', serif;
       line-height: 23px;
       text-align: center;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
@@ -4550,11 +4554,6 @@ Vertical navigation
       flex-direction: column;
       justify-content: center; }
 
-/* --------------------------------
-
-Content Sections - basic style
-
--------------------------------- */
 .svg-icon {
   text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
   padding: 5px; }
@@ -4573,13 +4572,13 @@ Content Sections - basic style
   background: url(../img/janayoga.jpg); }
 
 #section2 {
-  background: url(../img/about.jpg); }
+  background: url(../img/privatelessons.jpg); }
 
 #section3 {
   background: url(../img/classes1.jpg); }
 
 #section4 {
-  background: url(../img/privatelessons.jpg); }
+  background: url(../img/about.jpg); }
 
 #section6 {
   background: url(../img/massage.jpg); }
@@ -4600,39 +4599,41 @@ Content Sections - basic style
 .section {
   padding: 0; }
 
-.cd-section .overlay-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
-.cd-section .content-wrapper {
-  position: relative;
-  z-index: 1000; }
-.cd-section .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
-  display: block;
-  margin: 0 auto 20px;
-  text-align: center;
-  color: #fff; }
-.cd-section .flourish {
-  font-family: 'Playfair Display', serif;
-  font-size: 2em;
-  line-height: 20px;
-  font-weight: bold; }
-.cd-section .content p {
-  line-height: 1.5;
-  letter-spacing: 2px;
-  max-width: 680px;
-  text-align: center;
-  font-weight: 500;
-  font-family: 'Open Sans', sans-serif;
-  margin: auto;
-  display: block; }
-  .cd-section .content p a {
-    color: inherit; }
+.cd-section {
+  position: relative; }
+  .cd-section .overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .cd-section .content-wrapper {
+    position: relative;
+    z-index: 1000; }
+  .cd-section .section-title {
+    font-family: 'Spectral', serif;
+    font-size: 4.5rem;
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #fff; }
+  .cd-section .flourish {
+    font-size: 1.5em;
+    line-height: 20px; }
+  .cd-section .content p {
+    line-height: 1.5;
+    letter-spacing: 2px;
+    max-width: 680px;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    display: block;
+    font-size: .9em;
+    color: #fff; }
+    .cd-section .content p a {
+      color: inherit; }
 
 /* ---------------------------------------------------------------------
 
@@ -4644,11 +4645,14 @@ Content Sections - basic style
 # -- section 2
 
 --------------------------------------------------------------------- */
-#section2 .content p {
+#section2 .content .section-title {
+  color: #fff; }
+#section2 p {
   text-align: left;
   padding: 10px;
   line-height: initial;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #fff; }
 
 /* ---------------------------------------------------------------------
 
