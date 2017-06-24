@@ -46,6 +46,15 @@ Primary style
 
 -------------------------------- */
 
+@font-face {
+    font-family: fed;
+    src: url(../fonts/fed.otf);
+}
+@font-face {
+    font-family: Monly-Bold;
+    src: url(../fonts/monly/Monly-Bold.otf);
+}
+
 *, *::after, *::before {
 	box-sizing: border-box;
 }
@@ -61,11 +70,15 @@ html {
 body {
 	font: {
 		size: 1.6rem;
-		family: 'Open Sans', sans-serif;
+		font-family: "adobe-caslon-pro";
 		color: #fff;
 	}
 
 	@include font-smoothing;
+}
+
+h1, h2, h3, h4, h4 {
+	font-family: "adobe-caslon-pro";
 }
 
 a {
@@ -167,6 +180,7 @@ Vertical navigation
 		font-weight: bold;
 		border-bottom: 1px solid rgba($color-1, .1);
 
+
 		&.active {
 			color: #363737;
 		}
@@ -251,7 +265,7 @@ Vertical navigation
 			padding: 3em 0 0;
 			margin: 1.4em auto;
 			border-bottom: none;
-			font-size: 1.2rem;
+
 			color: #719DC1;
 
 			&.active {
@@ -359,9 +373,14 @@ Vertical navigation
 		}
 
 		.label {
-			font-size: 14px;
+
 			display: block;
-			font-family: 'Open Sans', sans-serif;
+            font-family: "p22-underground";
+            font-size: 10px;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
 			/* Force Hardware Acceleration */
 			@include backface-visibility(hidden);
 			@include transform(translateZ(0));
@@ -399,25 +418,21 @@ Vertical navigation
 
 .header-container {
 	position: fixed;
-	top: 100px;
+	top: 50px;
 	left: 30px;
 	width: max-content;
 	z-index: 1000;
 
 	.logo {
 
-		font-family: 'Slabo 27px', serif;
-		font-family: 'Oswald', sans-serif;
-		font-family: 'Spectral', serif;
 		position: relative;
 
 		.site-title {
 			font-size: 2.25em;
 			color: #fff;
-			font-family: 'Spectral', serif;
+                        font-family: "adobe-caslon-pro";
 			line-height: 23px;
 			text-align: center;
-			// opacity: .7;
 			text-shadow: -5px -5px 10px rgba(0,0,0,.5);
 		}
 		.social {
@@ -492,11 +507,13 @@ Vertical navigation
 	// background: url(../img/bg.jpg), url(../img/janayoga.jpg);
 	// background-blend-mode: multiply;
 	// mix-blend-mode: exclusion;
-	background: url(../img/janayoga.jpg);
+	// background: url(../img/janayoga.jpg);
+	background-color: #f9f7f3;
 
 }
 #section2 {
-	background: url(../img/privatelessons.jpg);
+	// background: url(../img/privatelessons.jpg);
+    background-color: #f9f7f3;
 }
 #section3 {
 	background: url(../img/classes1.jpg);
@@ -566,7 +583,7 @@ Vertical navigation
 			max-width: 680px;
 			text-align: center;
 			font-weight: 500;
-			font-family: 'Open Sans', sans-serif;
+            font-family: "adobe-caslon-pro";
 			margin: auto;
 			display: block;
 			font-size: .9em;
@@ -597,7 +614,62 @@ Vertical navigation
 # -- section 1
 
 --------------------------------------------------------------------- */
+#section1 {
 
+	position: relative;
+
+	.front-page-half-1, .front-page-half-2 {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+        overflow: hidden;
+
+	}
+
+    .front-page-half-1 {
+        top: 0;
+		left: 0;
+
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+		}
+    }
+    .front-page-half-2 {
+        top: 0;
+		right: 0;
+        margin:auto;
+        padding: 100px;
+
+        .title-2 {
+            margin-top: 100px;
+            color: #bc8351;
+            font-family: Monly-Bold;
+            text-align: center;
+            font-size: 5rem;
+        }
+        p {
+            margin-top: 50px;
+            font-size: 32px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: .5px;
+            text-transform: none;
+            line-height: 46px;
+            color: #2f4c54;
+            font-family: "adobe-caslon-pro";
+        }
+        .author {
+            display: block;
+            color: #bc8351;
+            text-indent: 100px;
+            font-family: "adobe-caslon-pro";
+
+        }
+    }
+}
 
 
 
@@ -608,21 +680,52 @@ Vertical navigation
 --------------------------------------------------------------------- */
 
 #section2 {
+    position: relative;
+    overflow: scroll;
 
-	.content {
+	.front-page-half-1, .front-page-half-2 {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+        overflow: hidden;
+	}
 
-		.section-title {
-			color: #fff;
+    .front-page-half-1 {
+
+        top: 0;
+		left: 0;
+        padding: 50px 100px 100px 100px;
+
+
+        h1 {
+            color: #bc8351;
+            font-family: Monly-Bold;
+            text-align: center;
+            font-size: 5rem;
+        }
+        p {
+            margin-top: 50px;
+            text-transform: none;
+            color: #2f4c54;
+            font-family: "adobe-caslon-pro";
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: .02em;
+            line-height: 28px;
+        }
+    }
+    .front-page-half-2 {
+        top: 0;
+		right: 0;
+        margin:auto;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
 		}
-	}
-
-	p {
-		text-align: left;
-		padding: 10px;
-		line-height: initial;
-		font-weight: 500;
-		color: #fff;
-	}
+    }
 }
 
 /* ---------------------------------------------------------------------
@@ -640,6 +743,14 @@ Vertical navigation
 
 #section7 {
 
+    position: relative;
+
+    .content {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 200px;
+    }
 }
 
 /* --------------------------------

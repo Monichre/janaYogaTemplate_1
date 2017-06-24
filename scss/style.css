@@ -4120,9 +4120,6 @@ Primary style
 @font-face {
   font-family: fed;
   src: url(../fonts/fed.otf); }
-@font-face {
-  font-family: Monly-Bold;
-  src: url(../fonts/monly/Monly-Bold.otf); }
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -4137,7 +4134,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 h1, h2, h3, h4, h4 {
-  font-family: "adobe-caslon-pro"; }
+  font-family: "p22-underground"; }
 
 a {
   text-decoration: none; }
@@ -4329,6 +4326,7 @@ Vertical navigation
         padding: 3em 0 0;
         margin: 1.4em auto;
         border-bottom: none;
+        font-size: 1.2rem;
         color: #719DC1; }
         .cd-vertical-nav a::before, .cd-vertical-nav a::after {
           /* used to create the filled circle and the background icon */
@@ -4468,13 +4466,9 @@ Vertical navigation
         -o-transform: translateX(-50%) translateY(-14.5em) scale(0.25);
         transform: translateX(-50%) translateY(-14.5em) scale(0.25); }
       .cd-vertical-nav .label {
+        font-size: 14px;
         display: block;
-        font-family: "p22-underground";
-        font-size: 10px;
-        font-weight: 600;
-        font-style: normal;
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
+        font-family: "adobe-caslon-pro";
         /* Force Hardware Acceleration */
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -4518,7 +4512,7 @@ Vertical navigation
 -------------------------------- */
 .header-container {
   position: fixed;
-  top: 50px;
+  top: 100px;
   left: 30px;
   width: max-content;
   z-index: 1000; }
@@ -4527,7 +4521,6 @@ Vertical navigation
     .header-container .logo .site-title {
       font-size: 2.25em;
       color: #fff;
-      font-family: "adobe-caslon-pro";
       line-height: 23px;
       text-align: center;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
@@ -4581,7 +4574,7 @@ Vertical navigation
   background-color: #f9f7f3; }
 
 #section2 {
-  background-color: #f9f7f3; }
+  background: url(../img/privatelessons.jpg); }
 
 #section3 {
   background: url(../img/classes1.jpg); }
@@ -4636,7 +4629,7 @@ Vertical navigation
     max-width: 680px;
     text-align: center;
     font-weight: 500;
-    font-family: "adobe-caslon-pro";
+    font-family: 'Open Sans', sans-serif;
     margin: auto;
     display: block;
     font-size: .9em;
@@ -4651,85 +4644,31 @@ Vertical navigation
 --------------------------------------------------------------------- */
 #section1 {
   position: relative; }
-  #section1 .front-page-half-1, #section1 .front-page-half-2 {
+  #section1 .front-page-half {
     position: absolute;
     height: 100%;
-    width: 50%;
-    overflow: hidden; }
-  #section1 .front-page-half-1 {
+    width: 100%;
     top: 0;
-    left: 0; }
-    #section1 .front-page-half-1 img {
-      object-fit: cover;
+    left: 0;
+    float: left;
+    width: 50%; }
+    #section1 .front-page-half img {
       height: 100%;
       width: 100%; }
-  #section1 .front-page-half-2 {
-    top: 0;
-    right: 0;
-    margin: auto;
-    padding: 100px; }
-    #section1 .front-page-half-2 .title-2 {
-      margin-top: 100px;
-      color: #bc8351;
-      font-family: Monly-Bold;
-      text-align: center;
-      font-size: 5rem; }
-    #section1 .front-page-half-2 p {
-      margin-top: 50px;
-      font-size: 32px;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: .5px;
-      text-transform: none;
-      line-height: 46px;
-      color: #2f4c54;
-      font-family: "adobe-caslon-pro"; }
-    #section1 .front-page-half-2 .author {
-      display: block;
-      color: #bc8351;
-      text-indent: 100px;
-      font-family: "adobe-caslon-pro"; }
 
 /* ---------------------------------------------------------------------
 
 # -- section 2
 
 --------------------------------------------------------------------- */
-#section2 {
-  position: relative;
-  overflow: scroll; }
-  #section2 .front-page-half-1, #section2 .front-page-half-2 {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    overflow: hidden; }
-  #section2 .front-page-half-1 {
-    top: 0;
-    left: 0;
-    padding: 50px 100px 100px 100px; }
-    #section2 .front-page-half-1 h1 {
-      color: #bc8351;
-      font-family: Monly-Bold;
-      text-align: center;
-      font-size: 5rem; }
-    #section2 .front-page-half-1 p {
-      margin-top: 50px;
-      text-transform: none;
-      color: #2f4c54;
-      font-family: "adobe-caslon-pro";
-      font-size: 18px;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: .02em;
-      line-height: 28px; }
-  #section2 .front-page-half-2 {
-    top: 0;
-    right: 0;
-    margin: auto; }
-    #section2 .front-page-half-2 img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%; }
+#section2 .content .section-title {
+  color: #fff; }
+#section2 p {
+  text-align: left;
+  padding: 10px;
+  line-height: initial;
+  font-weight: 500;
+  color: #fff; }
 
 /* ---------------------------------------------------------------------
 
@@ -4741,14 +4680,6 @@ Vertical navigation
 # -- section 7
 
 ---------------- */
-#section7 {
-  position: relative; }
-  #section7 .content {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 200px; }
-
 /* --------------------------------
 
 no-js
