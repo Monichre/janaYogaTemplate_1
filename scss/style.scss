@@ -428,10 +428,10 @@ Vertical navigation
 		position: relative;
 
 		.site-title {
-			font-size: 2.25em;
+			font-size: 2.75em;
 			color: #fff;
                         font-family: "adobe-caslon-pro";
-			line-height: 23px;
+			line-height: 40px;
 			text-align: center;
 			text-shadow: -5px -5px 10px rgba(0,0,0,.5);
 		}
@@ -575,19 +575,24 @@ Vertical navigation
 		line-height: 20px;
 
 	}
+    .coming-soon {
+        margin-bottom: 10px!important;
+        border-bottom: 1px solid #fff;
+        width: max-content;
+    }
 
 	.content {
 		p {
-			line-height: 1.5;
-			letter-spacing: 2px;
-			max-width: 680px;
-			text-align: center;
-			font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            max-width: 680px;
+            text-align: center;
+            font-weight: 500;
             font-family: "adobe-caslon-pro";
-			margin: auto;
-			display: block;
-			font-size: .9em;
-			color: #fff;
+            margin: auto;
+            display: block;
+            font-size: 1.3em;
+            color: #fff;
 
 			a {
 				color: inherit;
@@ -694,7 +699,7 @@ Vertical navigation
 
         top: 0;
 		left: 0;
-        padding: 50px 100px 100px 100px;
+        padding: 100px 100px 100px 100px;
 
 
         h1 {

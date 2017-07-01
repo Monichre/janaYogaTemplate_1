@@ -4525,10 +4525,10 @@ Vertical navigation
   .header-container .logo {
     position: relative; }
     .header-container .logo .site-title {
-      font-size: 2.25em;
+      font-size: 2.75em;
       color: #fff;
       font-family: "adobe-caslon-pro";
-      line-height: 23px;
+      line-height: 40px;
       text-align: center;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
     .header-container .logo .social {
@@ -4630,16 +4630,20 @@ Vertical navigation
   .cd-section .flourish {
     font-size: 1.5em;
     line-height: 20px; }
+  .cd-section .coming-soon {
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid #fff;
+    width: max-content; }
   .cd-section .content p {
-    line-height: 1.5;
-    letter-spacing: 2px;
+    line-height: 1.2;
+    letter-spacing: 1px;
     max-width: 680px;
     text-align: center;
     font-weight: 500;
     font-family: "adobe-caslon-pro";
     margin: auto;
     display: block;
-    font-size: .9em;
+    font-size: 1.3em;
     color: #fff; }
     .cd-section .content p a {
       color: inherit; }
@@ -4706,7 +4710,7 @@ Vertical navigation
   #section2 .front-page-half-1 {
     top: 0;
     left: 0;
-    padding: 50px 100px 100px 100px; }
+    padding: 100px 100px 100px 100px; }
     #section2 .front-page-half-1 h1 {
       color: #bc8351;
       font-family: Monly-Bold;
