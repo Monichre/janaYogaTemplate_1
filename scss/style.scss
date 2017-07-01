@@ -52,7 +52,11 @@ Primary style
 }
 @font-face {
     font-family: Monly-Bold;
-    src: url(../fonts/monly/Monly-Bold.otf);
+    src: url(../fonts/Monly/Monly-Bold.otf);
+}
+@font-face {
+    font-family: Monly-Bold-2;
+    src: url(../fonts/Monly/Monly-Bold.woff);
 }
 
 *, *::after, *::before {
@@ -651,7 +655,7 @@ Vertical navigation
         .title-2 {
             margin-top: 100px;
             color: #bc8351;
-            font-family: Monly-Bold;
+            font-family: Monly-Bold, Monly-Bold-2;
             text-align: center;
             font-size: 5rem;
         }
@@ -704,7 +708,7 @@ Vertical navigation
 
         h1 {
             color: #bc8351;
-            font-family: Monly-Bold;
+            font-family: Monly-Bold, Monly-Bold-2;
             text-align: center;
             font-size: 5rem;
         }

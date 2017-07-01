@@ -4122,7 +4122,10 @@ Primary style
   src: url(../fonts/fed.otf); }
 @font-face {
   font-family: Monly-Bold;
-  src: url(../fonts/monly/Monly-Bold.otf); }
+  src: url(../fonts/Monly/Monly-Bold.otf); }
+@font-face {
+  font-family: Monly-Bold-2;
+  src: url(../fonts/Monly/Monly-Bold.woff); }
 *, *::after, *::before {
   box-sizing: border-box; }
 
@@ -4675,7 +4678,7 @@ Vertical navigation
     #section1 .front-page-half-2 .title-2 {
       margin-top: 100px;
       color: #bc8351;
-      font-family: Monly-Bold;
+      font-family: Monly-Bold, Monly-Bold-2;
       text-align: center;
       font-size: 5rem; }
     #section1 .front-page-half-2 p {
@@ -4713,7 +4716,7 @@ Vertical navigation
     padding: 100px 100px 100px 100px; }
     #section2 .front-page-half-1 h1 {
       color: #bc8351;
-      font-family: Monly-Bold;
+      font-family: Monly-Bold, Monly-Bold-2;
       text-align: center;
       font-size: 5rem; }
     #section2 .front-page-half-1 p {
