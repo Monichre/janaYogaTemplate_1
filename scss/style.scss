@@ -434,7 +434,7 @@ Vertical navigation
 		.site-title {
 			font-size: 2.75em;
 			color: #fff;
-                        font-family: "adobe-caslon-pro";
+            font-family: Monly-Bold, Monly-Bold-2;
 			line-height: 40px;
 			text-align: center;
 			text-shadow: -5px -5px 10px rgba(0,0,0,.5);
@@ -506,13 +506,13 @@ Vertical navigation
 
 
 #section1 {
-	// background-image: url(../img/janayoga.jpg);
+	background-image: url(../img/janayoga.jpg);
 	// background-image: url(../img/janayoga.jpg);
 	// background: url(../img/bg.jpg), url(../img/janayoga.jpg);
 	// background-blend-mode: multiply;
 	// mix-blend-mode: exclusion;
 	// background: url(../img/janayoga.jpg);
-	background-color: #f9f7f3;
+	// background-color: #f9f7f3;
 
 }
 #section2 {
@@ -563,7 +563,7 @@ Vertical navigation
 		z-index: 1000;
 	}
 	.section-title {
-		font-family: 'Spectral', serif;
+		font-family: Monly-Bold, Monly-Bold-2;
 
 
 		font-size: 4.5rem;
@@ -580,9 +580,10 @@ Vertical navigation
 
 	}
     .coming-soon {
-        margin-bottom: 10px!important;
+        margin: 10px auto!important;
         border-bottom: 1px solid #fff;
         width: max-content;
+        font-family: "p22-underground";
     }
 
 	.content {

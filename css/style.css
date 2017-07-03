@@ -4530,7 +4530,7 @@ Vertical navigation
     .header-container .logo .site-title {
       font-size: 2.75em;
       color: #fff;
-      font-family: "adobe-caslon-pro";
+      font-family: Monly-Bold, Monly-Bold-2;
       line-height: 40px;
       text-align: center;
       text-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5); }
@@ -4581,7 +4581,7 @@ Vertical navigation
 
 --------------------------------------------------------------------- */
 #section1 {
-  background-color: #f9f7f3; }
+  background-image: url(../img/janayoga.jpg); }
 
 #section2 {
   background-color: #f9f7f3; }
@@ -4624,7 +4624,7 @@ Vertical navigation
     position: relative;
     z-index: 1000; }
   .cd-section .section-title {
-    font-family: 'Spectral', serif;
+    font-family: Monly-Bold, Monly-Bold-2;
     font-size: 4.5rem;
     display: block;
     margin: 0 auto 20px;
@@ -4634,9 +4634,10 @@ Vertical navigation
     font-size: 1.5em;
     line-height: 20px; }
   .cd-section .coming-soon {
-    margin-bottom: 10px !important;
+    margin: 10px auto !important;
     border-bottom: 1px solid #fff;
-    width: max-content; }
+    width: max-content;
+    font-family: "p22-underground"; }
   .cd-section .content p {
     line-height: 1.2;
     letter-spacing: 1px;
